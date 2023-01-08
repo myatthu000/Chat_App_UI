@@ -24,7 +24,7 @@ Almost Responsive,
 **Register**
 
 <div style="width: 450px;height:600px;">
-<img src="assets/readme/responsive_reg.png" style="width:100%;">
+<img src="assets/readme/responsive_reg.png" style="width:100%;height:300px;">
 </div>
 <div style="width: 450px;">
 <img src="assets/readme/reg.png" style="width:100%;">
