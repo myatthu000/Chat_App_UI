@@ -24,7 +24,7 @@ Almost Responsive,
 **Register**
 
 <div style="width: 450px;height:600px;">
-<img src="assets/readme/responsive_reg.png" style="width:100%;height:300px;">
+<img src="assets/readme/responsive_reg.png" style="width:100%;">
 </div>
 <div style="width: 450px;">
 <img src="assets/readme/reg.png" style="width:100%;">
@@ -76,7 +76,7 @@ Almost Responsive,
 **Profile**
 
 <div style="width: 450px;height:600px;">
-<img src="assets/readme/profile_mobi.png" style="width:100%;">
+<img src="assets/readme/profile_mobi.png" style="width:100px;">
 </div>
 <div style="width: 450px;">
 <img src="assets/readme/profile_lap.png" style="width:100%;">
