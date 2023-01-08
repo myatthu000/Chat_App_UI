@@ -14,74 +14,487 @@
 
 </head>
 <body>
+
 <section class="container">
     <div class="row">
-        <section class="container-fluid">
-            <div class="row vh-100 overflow-hidden">
-<!--                navbar-->
-                <div class="col-12 d-flex justify-content-between align-items-center py-2 px-3">
+        <section class="container-fluid vh-100">
+            <div class="row overflow-hidden">
+<!--                navbar section start-->
+                <div class="col-12 col-lg-12 col-md-12 col-xl-12 col-sm-12 d-flex justify-content-between align-items-center border-bottom shadow-sm p-2">
                     <!--                    left middle right-->
-                    <div class="">
-                        <i class="me-3 feather feather-feather"></i>
-                        <div class="me-2 d-inline">
+                    <div class="my-1">
+                        <div class="d-inline me-3">
+                            <img src="assets/Icons/icons8-messaging-color-32.png" alt="">
+                        </div>
+<!--                        <i class="me-3 feather feather-feather"></i>-->
+                        <div class="me-3 d-inline">
                         <span class="p-1 border-bottom text-primary border-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <!-- Button trigger modal -->
-                            <i class="feather feather-search"></i> Find Friends
+<!--                            <i class="feather feather-search"></i>-->
+                            Find Friends
                         </span>
-
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="FindFriend" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Find Friends' </h1>
+                                            <h1 class="modal-title fs-5" id="FindFriend">Find Friends' </h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <input type="text" class="form-control mb-2" placeholder="Enter your friend's name or Email..">
-                                            <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
-                                                <div class="d-flex justify-content-start align-items-center">
-                                                    <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
-                                                        <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
-                                                    </div>
-                                                    <div class="">
-                                                        <p class="user_name d-block p-0 m-0">Ye Ye</p>
-                                                        <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex justify-content-evenly align-items-center">
-                                                    <button class="btn btn-sm border border-primary me-2">
-                                                        <i class="feather feather-user-plus text-primary"></i> Add Friends
+                                            <ul style="overflow-x: auto;scroll-behavior: smooth;" class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                                        Search Friends
                                                     </button>
-                                                    <!--                                                <button class="btn btn-sm border bg-danger me-2 text-white">-->
-                                                    <!--                                                    <i class="feather feather-user-x"></i> Cancel-->
-                                                    <!--                                                </button>-->
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                                        Friend Requests
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                                        Active Now
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                                                    <input type="text" class="form-control mb-2" placeholder="Enter your friend's name or Email..">
+                                                    <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex justify-content-start align-items-center">
+                                                            <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="user_name d-block p-0 m-0">Ye Ye</p>
+                                                                <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-evenly align-items-center">
+                                                            <button class="btn btn-sm border border-primary me-2">
+                                                                <i class="feather feather-user-plus text-primary"></i> Add Friends
+                                                            </button>
+                                                            <!--                                                <button class="btn btn-sm border bg-danger me-2 text-white">-->
+                                                            <!--                                                    <i class="feather feather-user-x"></i> Cancel-->
+                                                            <!--                                                </button>-->
+                                                        </div>
+                                                        <div class="">
+                                                            <!-- Default dropstart button -->
+                                                            <div class="btn-group dropend">
+                                                                <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                                                <ul class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <li>
+                                                                        <a class="dropdown-item text-danger" href="#">
+                                                                            <i class="feather feather-alert-triangle"></i>
+                                                                            Report
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="border-top border-bottom">
+                                                                        <a class="dropdown-item text-primary" href="#">
+                                                                            <i class="feather feather-edit"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item text-black" href="#">
+                                                                            <i class="feather feather-send"></i>
+                                                                            Forward
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex justify-content-start align-items-center">
+                                                            <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="user_name d-block p-0 m-0">Ye Ye</p>
+                                                                <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-evenly align-items-center">
+                                                            <button class="btn btn-sm border border-primary me-2">
+                                                                <i class="feather feather-user-plus text-primary"></i> Add Friends
+                                                            </button>
+                                                            <!--                                                <button class="btn btn-sm border bg-danger me-2 text-white">-->
+                                                            <!--                                                    <i class="feather feather-user-x"></i> Cancel-->
+                                                            <!--                                                </button>-->
+                                                        </div>
+                                                        <div class="">
+                                                            <!-- Default dropstart button -->
+                                                            <div class="btn-group dropend">
+                                                                <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                                                <ul class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <li>
+                                                                        <a class="dropdown-item text-danger" href="#">
+                                                                            <i class="feather feather-alert-triangle"></i>
+                                                                            Report
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="border-top border-bottom">
+                                                                        <a class="dropdown-item text-primary" href="#">
+                                                                            <i class="feather feather-edit"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item text-black" href="#">
+                                                                            <i class="feather feather-send"></i>
+                                                                            Forward
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex justify-content-start align-items-center">
+                                                            <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="user_name d-block p-0 m-0">Ye Ye</p>
+                                                                <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-evenly align-items-center">
+                                                            <button class="btn btn-sm border border-primary me-2">
+                                                                <i class="feather feather-user-plus text-primary"></i> Add Friends
+                                                            </button>
+                                                            <!--                                                <button class="btn btn-sm border bg-danger me-2 text-white">-->
+                                                            <!--                                                    <i class="feather feather-user-x"></i> Cancel-->
+                                                            <!--                                                </button>-->
+                                                        </div>
+                                                        <div class="">
+                                                            <!-- Default dropstart button -->
+                                                            <div class="btn-group dropend">
+                                                                <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                                                <ul class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <li>
+                                                                        <a class="dropdown-item text-danger" href="#">
+                                                                            <i class="feather feather-alert-triangle"></i>
+                                                                            Report
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="border-top border-bottom">
+                                                                        <a class="dropdown-item text-primary" href="#">
+                                                                            <i class="feather feather-edit"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item text-black" href="#">
+                                                                            <i class="feather feather-send"></i>
+                                                                            Forward
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex justify-content-start align-items-center">
+                                                            <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="user_name d-block p-0 m-0">Ye Ye</p>
+                                                                <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-evenly align-items-center">
+                                                            <button class="btn btn-sm border border-primary me-2">
+                                                                <i class="feather feather-user-plus text-primary"></i> Add Friends
+                                                            </button>
+                                                            <!--                                                <button class="btn btn-sm border bg-danger me-2 text-white">-->
+                                                            <!--                                                    <i class="feather feather-user-x"></i> Cancel-->
+                                                            <!--                                                </button>-->
+                                                        </div>
+                                                        <div class="">
+                                                            <!-- Default dropstart button -->
+                                                            <div class="btn-group dropend">
+                                                                <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                                                <ul class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <li>
+                                                                        <a class="dropdown-item text-danger" href="#">
+                                                                            <i class="feather feather-alert-triangle"></i>
+                                                                            Report
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="border-top border-bottom">
+                                                                        <a class="dropdown-item text-primary" href="#">
+                                                                            <i class="feather feather-edit"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item text-black" href="#">
+                                                                            <i class="feather feather-send"></i>
+                                                                            Forward
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex justify-content-start align-items-center">
+                                                            <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="user_name d-block p-0 m-0">Ye Ye</p>
+                                                                <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-evenly align-items-center">
+                                                            <button class="btn btn-sm border border-primary me-2">
+                                                                <i class="feather feather-user-plus text-primary"></i> Add Friends
+                                                            </button>
+                                                            <!--                                                <button class="btn btn-sm border bg-danger me-2 text-white">-->
+                                                            <!--                                                    <i class="feather feather-user-x"></i> Cancel-->
+                                                            <!--                                                </button>-->
+                                                        </div>
+                                                        <div class="">
+                                                            <!-- Default dropstart button -->
+                                                            <div class="btn-group dropend">
+                                                                <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                                                <ul class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <li>
+                                                                        <a class="dropdown-item text-danger" href="#">
+                                                                            <i class="feather feather-alert-triangle"></i>
+                                                                            Report
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="border-top border-bottom">
+                                                                        <a class="dropdown-item text-primary" href="#">
+                                                                            <i class="feather feather-edit"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item text-black" href="#">
+                                                                            <i class="feather feather-send"></i>
+                                                                            Forward
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex justify-content-start align-items-center">
+                                                            <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="user_name d-block p-0 m-0">Ye Ye</p>
+                                                                <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-evenly align-items-center">
+                                                            <button class="btn btn-sm border border-primary me-2">
+                                                                <i class="feather feather-user-plus text-primary"></i> Add Friends
+                                                            </button>
+                                                            <!--                                                <button class="btn btn-sm border bg-danger me-2 text-white">-->
+                                                            <!--                                                    <i class="feather feather-user-x"></i> Cancel-->
+                                                            <!--                                                </button>-->
+                                                        </div>
+                                                        <div class="">
+                                                            <!-- Default dropstart button -->
+                                                            <div class="btn-group dropend">
+                                                                <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                                                <ul class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <li>
+                                                                        <a class="dropdown-item text-danger" href="#">
+                                                                            <i class="feather feather-alert-triangle"></i>
+                                                                            Report
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="border-top border-bottom">
+                                                                        <a class="dropdown-item text-primary" href="#">
+                                                                            <i class="feather feather-edit"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item text-black" href="#">
+                                                                            <i class="feather feather-send"></i>
+                                                                            Forward
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex justify-content-start align-items-center">
+                                                            <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="user_name d-block p-0 m-0">Ye Ye</p>
+                                                                <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-evenly align-items-center">
+                                                            <button class="btn btn-sm border border-primary me-2">
+                                                                <i class="feather feather-user-plus text-primary"></i> Add Friends
+                                                            </button>
+                                                            <!--                                                <button class="btn btn-sm border bg-danger me-2 text-white">-->
+                                                            <!--                                                    <i class="feather feather-user-x"></i> Cancel-->
+                                                            <!--                                                </button>-->
+                                                        </div>
+                                                        <div class="">
+                                                            <!-- Default dropstart button -->
+                                                            <div class="btn-group dropend">
+                                                                <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                                                <ul class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <li>
+                                                                        <a class="dropdown-item text-danger" href="#">
+                                                                            <i class="feather feather-alert-triangle"></i>
+                                                                            Report
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="border-top border-bottom">
+                                                                        <a class="dropdown-item text-primary" href="#">
+                                                                            <i class="feather feather-edit"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item text-black" href="#">
+                                                                            <i class="feather feather-send"></i>
+                                                                            Forward
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex justify-content-start align-items-center">
+                                                            <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="user_name d-block p-0 m-0">Ye Ye</p>
+                                                                <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-evenly align-items-center">
+                                                            <button class="btn btn-sm border border-primary me-2">
+                                                                <i class="feather feather-user-plus text-primary"></i> Add Friends
+                                                            </button>
+                                                            <!--                                                <button class="btn btn-sm border bg-danger me-2 text-white">-->
+                                                            <!--                                                    <i class="feather feather-user-x"></i> Cancel-->
+                                                            <!--                                                </button>-->
+                                                        </div>
+                                                        <div class="">
+                                                            <!-- Default dropstart button -->
+                                                            <div class="btn-group dropend">
+                                                                <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                                                <ul class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <li>
+                                                                        <a class="dropdown-item text-danger" href="#">
+                                                                            <i class="feather feather-alert-triangle"></i>
+                                                                            Report
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="border-top border-bottom">
+                                                                        <a class="dropdown-item text-primary" href="#">
+                                                                            <i class="feather feather-edit"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item text-black" href="#">
+                                                                            <i class="feather feather-send"></i>
+                                                                            Forward
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="">
-                                                    <!-- Default dropstart button -->
-                                                    <div class="btn-group dropend">
-                                                        <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
-                                                        <ul class="dropdown-menu">
-                                                            <!-- Dropdown menu links -->
-                                                            <li>
-                                                                <a class="dropdown-item text-danger" href="#">
-                                                                    <i class="feather feather-alert-triangle"></i>
-                                                                    Report
-                                                                </a>
-                                                            </li>
-                                                            <li class="border-top border-bottom">
-                                                                <a class="dropdown-item text-primary" href="#">
-                                                                    <i class="feather feather-edit"></i>
-                                                                    Edit
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item text-black" href="#">
-                                                                    <i class="feather feather-send"></i>
-                                                                    Forward
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+                                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                                                    <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex justify-content-start align-items-center">
+                                                            <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="user_name d-block p-0 m-0">Ye Ye</p>
+                                                                <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-evenly align-items-center">
+                                                            <button class="btn btn-sm border border-success me-2">
+                                                                <i class="feather feather-check text-success"></i> Accept
+                                                            </button>
+                                                            <button class="btn btn-sm border border-danger me-2">
+                                                                <i class="feather feather-x text-danger"></i> Decline
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                                                    <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-2 rounded-2 d-flex justify-content-between align-items-center">
+                                                        <div class="d-flex justify-content-start align-items-center">
+                                                            <div class="me-2 overflow-hidden" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="user_name d-block p-0 m-0">Ye Ye</p>
+                                                                <!--                                                    <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>-->
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-evenly align-items-center">
+                                                            <button class="btn btn-sm border border-primary me-2">
+                                                                <i class="feather feather-send text-primary"></i> Send Message
+                                                            </button>
+                                                        </div>
+                                                        <div class="">
+                                                            <!-- Default dropstart button -->
+                                                            <div class="btn-group dropend">
+                                                                <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                                                <ul class="dropdown-menu">
+                                                                    <!-- Dropdown menu links -->
+                                                                    <li>
+                                                                        <a class="dropdown-item text-danger" href="#">
+                                                                            <i class="feather feather-alert-triangle"></i>
+                                                                            Report
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="border-top border-bottom">
+                                                                        <a class="dropdown-item text-primary" href="#">
+                                                                            <i class="feather feather-edit"></i>
+                                                                            Edit
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item text-black" href="#">
+                                                                            <i class="feather feather-send"></i>
+                                                                            Forward
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -94,37 +507,122 @@
                                 </div>
                             </div>
                         </div>
-                        <i class="me-3 feather feather-feather"></i>
+<!--                        <i class="me-3 feather feather-feather"></i>-->
                     </div>
-                    <div class="d-flex justify-content-evenly align-items-center ">
-                        <input type="search" placeholder="Search ..." class="form-control me-2 rounded-pill">
-                        <button class="btn">
+                    <div class="my-1 d-none d-flex justify-content-evenly align-items-center">
+                        <input type="search" placeholder="Search Message ...." class="form-control form-control-sm rounded-pill">
+                        <button class="btn btn-sm">
                             <i class="feather feather-search text-primary"></i>
                         </button>
                     </div>
-                    <div class="text-black">
+                    <div class="my-1 text-black d-flex justify-content-between align-items-center">
                         <div class="form-check form-switch d-inline-block">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                             <label class="form-check-label" for="flexSwitchCheckDefault">DarkMode</label>
                         </div>
                         <div class="d-inline">
-                            <i class="ms-3 feather feather-menu"></i>
-                        </div>
-<!--                        <div class="d-inline">-->
-<!--                            <i class="ms-3 feather feather-settings"></i>-->
-<!--                        </div>-->
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <i class="feather feather-menu"></i>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="btn-close position-absolute top-0 end-0 p-1 border" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <h5 class="text-center mb-3">Personal Information</h5>
 
+                                            <div class="d-flex justify-content-center align-items-start flex-wrap">
+                                                <div class="my-1 me-2 border p-1" style="width: 200px;height: 200px;overflow: hidden;object-fit: contain;">
+                                                    <img src="assets/images/profiles/a.jpg" style="width: 100%;" alt="">
+                                                </div>
+                                                <div class="name">
+                                                    <span class="d-block mb-1">
+                                                    Name : <b>Ye Ye</b>
+                                                </span>
+                                                    <span class="d-block mb-1">
+                                                    Email : <b>Yeye@gmail.com</b>
+                                                </span>
+                                                    <span class="d-block mb-1">
+                                                    Age : <b>23</b>
+                                                </span>
+                                                    <div class="input-group mb-3">
+                                                        <label class="form-label" for="inputGroupFile02">Choose Profile</label>
+                                                        <input type="file" class="bg-light" style="" id="inputGroupFile02">
+                                                    </div>
+                                                    <div class="">
+                                                        <button class="btn-sm btn rounded-0 btn-outline-dark">Edit Profile</button>
+                                                        <button class="btn-sm btn rounded-0 btn-success">Upload</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+<!--                                            Setting-->
+                                            <div class="">
+                                                <h6>
+                                                    <i class="feather feather-settings"></i>
+                                                    Settings
+                                                </h6>
+<!--                                                Switches-->
+                                                <div class="mb-2">
+                                                    <div class="form-check justify-content-between d-flex">
+                                                        <label for="NotificationSwitch" class="form-check-label">Get Notifications (On/Off)</label>
+                                                        <input type="checkbox" typeof="switch" role="switch" id="NotificationSwitch" class="form-check-inline">
+                                                    </div>
+                                                    <div class="form-check justify-content-between d-flex">
+                                                        <label for="Switch2" class="form-check-label">Switch (On/Off)</label>
+                                                        <input type="checkbox" typeof="switch" role="switch" id="Switch2" class="form-check-inline">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+<!--                                            Password Change-->
+                                            <div class="my-2">
+                                                <h6>
+                                                    <i class="feather feather-lock"></i>
+                                                    Change Password
+                                                </h6>
+                                                <input type="password" class="form-control mb-1 rounded-0 border-bottom text-primary" placeholder="New Password">
+                                                <input type="password" class="form-control mb-1 rounded-0 border-bottom text-primary" placeholder="Confirm Password">
+                                                <button class="btn btn-outline-primary rounded-0 w-100">
+                                                    <i class="feather feather-log-out"></i>
+                                                    Change Password
+                                                </button>
+                                            </div>
+                                            <hr>
+<!--                                            logout buttons section start -->
+                                            <div class=" mb-2">
+                                                <button class="btn btn-danger w-100">
+                                                    <i class="feather feather-log-out"></i>
+                                                    Logout
+                                                </button>
+                                            </div>
+<!--                                            <div class=" mb-2">-->
+<!--                                                <button class="btn btn-success w-100">-->
+<!--                                                    <i class="feather feather-log-out"></i>-->
+<!--                                                    Button 1-->
+<!--                                                </button>-->
+<!--                                            </div>-->
+<!--                                            logout buttons section end-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="d-inline d-none">
                             <i class="ms-3 feather feather-sun text-warning"></i>
                             <i class="ms-3 feather feather-moon text-primary d-none"></i>
                         </div>
                     </div>
+                    <!--                    left middle right section end-->
                 </div>
-<!--                Left Sidebar-->
-                <div class="col-3">
-                    <!--                Left sidebar-->
+<!--                navbar section end-->
+
+<!--                Left Sidebar section start-->
+                <div class="col-12 col-lg-3 col-xl-3 col-md-4">
                     <div class="row">
-<!--                        for search friends-->
+<!--                        for search friends start section-->
                         <div class="col-12 border-bottom shadow-sm">
                             <div class="px-2 py-2 d-flex justify-content-center align-items-center">
                                 <input type="text" class="form-control d-inline-block form-control-sm border border-light rounded rounded-2" placeholder="Search Friends ...">
@@ -133,26 +631,29 @@
                                 </button>
                             </div>
                         </div>
+<!--                        for search friends end section-->
 <!--                        users-->
-                        <div class="pt-3 pb-3" style="height: 90vh;overflow-x: hidden;overflow-y: scroll;scroll-behavior: smooth;scroll-margin: 10px;">
+                        <div class="pt-3 pb-3" style="height: 80vh;overflow-x: hidden;overflow-y: scroll;scroll-behavior: smooth;scroll-margin: 10px;">
                             <div class="col-12">
                                 <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-1 rounded-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
-                                            <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
-                                        </div>
-                                        <div class="">
-                                            <div class="">
-                                                <p class="user_name d-inline-block p-0 m-0 me-2">
-                                                    Ye Ye
-                                                </p>
-                                                <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
-                                                <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                    <a href="#message_user1" class="text-decoration-none text-black">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="me-2 overflow-hidden position-relative" style="width: 40px;height: 40px;border-radius: 50%;object-fit: contain;">
+                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
                                             </div>
+                                            <div class="text-nowrap">
+                                                <div class="">
+                                                    <p class="user_name d-inline-block p-0 m-0 me-2">
+                                                        Ye Ye
+                                                    </p>
+                                                    <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
+                                                    <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                                </div>
 
-                                            <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                                <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                     <div class="">
                                         <!-- Default dropstart button -->
                                         <div class="btn-group dropend">
@@ -182,22 +683,24 @@
                                     </div>
                                 </div>
                                 <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-1 rounded-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
-                                            <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
-                                        </div>
-                                        <div class="">
-                                            <div class="">
-                                                <p class="user_name d-inline-block p-0 m-0 me-2">
-                                                    Ye Ye
-                                                </p>
-                                                <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
-                                                <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                    <a href="#" class="text-decoration-none text-black">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
                                             </div>
+                                            <div class="">
+                                                <div class="">
+                                                    <p class="user_name d-inline-block p-0 m-0 me-2">
+                                                        Ye Ye
+                                                    </p>
+                                                    <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
+                                                    <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                                </div>
 
-                                            <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                                <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                     <div class="">
                                         <!-- Default dropstart button -->
                                         <div class="btn-group dropend">
@@ -226,24 +729,74 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-1 rounded-2 d-flex justify-content-between align-items-center">
+                                    <a href="#" class="text-decoration-none text-black">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                            </div>
+                                            <div class="">
+                                                <div class="">
+                                                    <p class="user_name d-inline-block p-0 m-0 me-2">
+                                                        Ye Ye
+                                                    </p>
+                                                    <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
+                                                    <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                                </div>
+
+                                                <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="">
+                                        <!-- Default dropstart button -->
+                                        <div class="btn-group dropend">
+                                            <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                            <ul class="dropdown-menu">
+                                                <!-- Dropdown menu links -->
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">
+                                                        <i class="feather feather-trash "></i>
+                                                        Delete
+                                                    </a>
+                                                </li>
+                                                <li class="border-top border-bottom">
+                                                    <a class="dropdown-item text-primary" href="#">
+                                                        <i class="feather feather-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-black" href="#">
+                                                        <i class="feather feather-send"></i>
+                                                        Forward
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!--                        active btn-->
                                 <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);background: rgba(161,169,236,0.18);" class="user-box border border-primary p-2 mb-1 rounded-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
-                                            <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
-                                        </div>
-                                        <div class="">
-                                            <div class="">
-                                                <p class="user_name d-inline-block p-0 m-0 me-2">
-                                                    Ye Ye
-                                                </p>
-                                                <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
-                                                <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                    <a href="#">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
                                             </div>
+                                            <div class="">
+                                                <div class="">
+                                                    <p class="user_name d-inline-block p-0 m-0 me-2">
+                                                        Ye Ye
+                                                    </p>
+                                                    <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
+                                                    <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                                </div>
 
-                                            <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                                <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                     <div class="">
                                         <!-- Default dropstart button -->
                                         <div class="btn-group dropend">
@@ -273,22 +826,24 @@
                                     </div>
                                 </div>
                                 <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-1 rounded-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-start align-items-center">
-                                        <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
-                                            <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
-                                        </div>
-                                        <div class="">
-                                            <div class="">
-                                                <p class="user_name d-inline-block p-0 m-0 me-2">
-                                                    Ye Ye
-                                                </p>
-                                                <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
-                                                <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                    <a href="#" class="text-decoration-none text-black">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
                                             </div>
+                                            <div class="">
+                                                <div class="">
+                                                    <p class="user_name d-inline-block p-0 m-0 me-2">
+                                                        Ye Ye
+                                                    </p>
+                                                    <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
+                                                    <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                                </div>
 
-                                            <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                                <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                     <div class="">
                                         <!-- Default dropstart button -->
                                         <div class="btn-group dropend">
@@ -317,18 +872,167 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-1 rounded-2 d-flex justify-content-between align-items-center">
+                                    <a href="#" class="text-decoration-none text-black">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                            </div>
+                                            <div class="">
+                                                <div class="">
+                                                    <p class="user_name d-inline-block p-0 m-0 me-2">
+                                                        Ye Ye
+                                                    </p>
+                                                    <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
+                                                    <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                                </div>
+
+                                                <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="">
+                                        <!-- Default dropstart button -->
+                                        <div class="btn-group dropend">
+                                            <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                            <ul class="dropdown-menu">
+                                                <!-- Dropdown menu links -->
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">
+                                                        <i class="feather feather-trash "></i>
+                                                        Delete
+                                                    </a>
+                                                </li>
+                                                <li class="border-top border-bottom">
+                                                    <a class="dropdown-item text-primary" href="#">
+                                                        <i class="feather feather-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-black" href="#">
+                                                        <i class="feather feather-send"></i>
+                                                        Forward
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-1 rounded-2 d-flex justify-content-between align-items-center">
+                                    <a href="#" class="text-decoration-none text-black">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                            </div>
+                                            <div class="">
+                                                <div class="">
+                                                    <p class="user_name d-inline-block p-0 m-0 me-2">
+                                                        Ye Ye
+                                                    </p>
+                                                    <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
+                                                    <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                                </div>
+
+                                                <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="">
+                                        <!-- Default dropstart button -->
+                                        <div class="btn-group dropend">
+                                            <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                            <ul class="dropdown-menu">
+                                                <!-- Dropdown menu links -->
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">
+                                                        <i class="feather feather-trash "></i>
+                                                        Delete
+                                                    </a>
+                                                </li>
+                                                <li class="border-top border-bottom">
+                                                    <a class="dropdown-item text-primary" href="#">
+                                                        <i class="feather feather-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-black" href="#">
+                                                        <i class="feather feather-send"></i>
+                                                        Forward
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="user-box border border-light p-2 mb-1 rounded-2 d-flex justify-content-between align-items-center">
+                                    <a href="#" class="text-decoration-none text-black">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+                                                <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                            </div>
+                                            <div class="">
+                                                <div class="">
+                                                    <p class="user_name d-inline-block p-0 m-0 me-2">
+                                                        Ye Ye
+                                                    </p>
+                                                    <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
+                                                    <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                                </div>
+
+                                                <p class="message_description_slug d-block p-0 m-0 small opacity-25">Lorem ipsum dolor sit amet....</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="">
+                                        <!-- Default dropstart button -->
+                                        <div class="btn-group dropend">
+                                            <i class="feather feather-more-vertical border text-black"  data-bs-toggle="dropdown"></i>
+                                            <ul class="dropdown-menu">
+                                                <!-- Dropdown menu links -->
+                                                <li>
+                                                    <a class="dropdown-item text-danger" href="#">
+                                                        <i class="feather feather-trash "></i>
+                                                        Delete
+                                                    </a>
+                                                </li>
+                                                <li class="border-top border-bottom">
+                                                    <a class="dropdown-item text-primary" href="#">
+                                                        <i class="feather feather-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-black" href="#">
+                                                        <i class="feather feather-send"></i>
+                                                        Forward
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
+<!--                        users end-->
                     </div>
                 </div>
-<!--                Right Sidebar-->
-                <div class="col-9 ">
+<!--                Left Sidebar section end-->
+
+<!--                Right Sidebar section start-->
+                <div class="col-12 col-xl-9 col-lg-9 col-md-8">
+
+<!--                    Right side navbar section start-->
                     <div class="row">
-                        <div class="col-12 border-bottom">
-                            <div class="d-flex justify-content-between align-items-center border border-light">
-                                <div style="box-shadow: 0 2px 20px 0.01px rgba(183,183,187,0.2);" class="p-2 m-1 rounded-2 d-flex justify-content-between align-items-center">
+                        <div class="col-12 border-bottom shadow-sm" style="box-shadow: 0 3px 20px 0.01px rgba(183,183,187,0.2);border-bottom: 5px;">
+                            <div class="d-flex justify-content-between align-items-center">
+<!--                                Left User Name, Icon and Action-->
+                                <div  class="p-1 m-1 rounded-2 d-flex justify-content-between align-items-center">
                                     <div class="d-flex justify-content-start align-items-center">
-                                        <div class="me-2 overflow-hidden position-relative" style="width: 60px;height: 60px;border-radius: 50%;object-fit: contain;">
+
+                                        <div class="me-2 overflow-hidden position-relative" style="width: 35px;height: 35px;border-radius: 50%;object-fit: contain;">
                                             <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
                                         </div>
                                         <div class="">
@@ -339,40 +1043,51 @@
                                                 <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
                                                 <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
                                             </div>
-
-                                            <p class="message_description_slug d-block p-0 m-0 small opacity-25">
+                                            <p class="message_description_slug d-block p-0 m-0 small opacity-75">
                                                 Active Now
                                             </p>
 <!--                                            <p class="message_description_slug d-block p-0 m-0 small opacity-25">-->
 <!--                                                24 minutes ago-->
 <!--                                            </p>-->
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </div>
 
+<!--                                Middle message search box-->
+                                <div class="my-1 d-none d-flex justify-content-evenly align-items-center">
+                                    <input type="search" placeholder="Search Message ...." class="form-control form-control-sm rounded-pill">
+                                    <button class="btn btn-sm">
+                                        <i class="feather feather-search text-primary"></i>
+                                    </button>
+                                </div>
+
+<!--                                Right Icons-->
                                 <div class="">
-                                    <div class="p-1 bg-primary text-white text-center d-inline-block" style="width: 35px;height: 35px;border-radius: 50%;">
+                                    <div class="p-1 d-none bg-primary text-white text-center d-inline-block" style="width: 35px;height: 35px;border-radius: 50%;">
                                         <i class="feather feather-video"></i>
                                     </div>
-                                    <div class="p-1 bg-primary text-white text-center d-inline-block" style="width: 35px;height: 35px;border-radius: 50%;">
+                                    <div class="p-1 d-none bg-primary text-white text-center d-inline-block" style="width: 35px;height: 35px;border-radius: 50%;">
                                         <i class="feather feather-phone"></i>
                                     </div>
                                     <div class="p-1 bg-primary text-white text-center d-inline-block" style="width: 35px;height: 35px;border-radius: 50%;">
                                         <i class="feather feather-more-vertical"></i>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
                     </div>
-                    <div class="row border border-primary p-2" style="height:70vh;scroll-behavior: smooth;position: relative;bottom: 0;overflow-y: scroll;overflow-x: hidden;">
+<!--                    Right side navbar section end-->
+
+<!--                    Message display section start-->
+                    <div class="row p-2 mb-2" id="message_user1" style="height:70vh;scroll-behavior: smooth;position: relative;bottom: 0;overflow-y: scroll;overflow-x: hidden;">
                         <div class="col-12">
                             <!--                        message display box-->
                             <section class="row">
                                 <!--                    message from another side of user-->
-                                <div class="bg-light">
-                                    <div class="p-1 d-block bg-primary text-white float-start rounded position-relative my-2" style="min-width: 500px;max-width: 300px;height: auto;">
+                                <div class="bg-light my-3">
+                                    <div class="p-1 d-block bg-primary text-white float-start rounded position-relative my-2" style="max-width: 300px;height: auto;">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque modi officiis pariatur rerum, vitae.</p>
                                         <div class="position-absolute start-100 top-0 ps-2 pe-2 ms-2">
                                             <!-- Default dropstart button -->
@@ -406,11 +1121,10 @@
                                             <span class="feather feather-eye text-primary me-2 text-center"></span>
                                         </div>
                                     </div>
-
                                 </div>
                                 <!--                    message from user-->
-                                <div class="bg-white">
-                                    <div class="p-1 d-block bg-primary text-white float-end position-relative rounded my-2" style="width: 500px;height: auto;">
+                                <div class="bg-white my-3">
+                                    <div class="p-1 d-block bg-primary text-white float-end position-relative rounded my-2" style="max-width: 300px;height: auto;">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque modi officiis pariatur rerum, vitae.</p>
                                         <div class="position-absolute end-100 top-0 pe-2 ps-2 me-2">
                                             <!-- Default dropstart button -->
@@ -445,11 +1159,16 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--                    message from another side of user-->
+
                             </section>
                         </div>
                     </div>
+<!--                    Message display section end -->
+
+<!--                    Message send input section start-->
                     <div class="row">
-                        <div class="col-12">
+                        <div class="mb-2 col-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
                             <div class="d-flex justify-content-center position-relative">
                                 <textarea class="form-control me-2" rows="1" name="text" id="user_id_text"></textarea>
                                 <div class="d-flex justify-content-start align-items-center ">
@@ -459,18 +1178,19 @@
                                     <button class="btn border border-success text-black me-2" style="background: rgba(220,53,69,0.7);">
                                         <i class="feather feather-paperclip text-white"></i>
                                     </button>
-                                    <button class="btn border border-success text-black me-2" style="background: rgba(255,193,7,0.7);">
+                                    <button class="d-none d-sm-none d-lg-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block btn border border-success text-black me-2" style="background: rgba(255,193,7,0.7);">
                                         <i class="feather feather-more-horizontal text-white"></i>
                                     </button>
-
                                 </div>
                             </div>
                         </div>
                     </div>
+<!--                    Message send input section end-->
+
                 </div>
+<!--                Right Sidebar section end-->
             </div>
         </section>
-
     </div>
 </section>
 

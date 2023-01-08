@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat Application</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!--    <link rel="stylesheet" href="node_modules/bootstrap/dist/js/bootstrap.min.js">-->
+    <link rel="stylesheet" href="assets/feather-icons/feather.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+<section class="container">
+    <div class="row">
+        <section class="container-fluid vh-100">
+            <div class="row overflow-hidden">
+                <div class="col-12 col-xl-9 col-lg-9 col-md-9">
+
+                    <!--                    Right side navbar section start-->
+                    <div class="row">
+                        <div class="col-12 border-bottom shadow-sm" style="box-shadow: 0 3px 20px 0.01px rgba(183,183,187,0.2);border-bottom: 5px;">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!--                                Left User Name, Icon and Action-->
+                                <div  class="p-1 m-1 rounded-2 d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-start align-items-center">
+
+                                        <div class="me-2 overflow-hidden position-relative" style="width: 35px;height: 35px;border-radius: 50%;object-fit: contain;">
+                                            <img src="assets/images/profiles/a.jpg" class="" style="width: 100%;" alt="">
+                                        </div>
+                                        <div class="">
+                                            <div class="">
+                                                <p class="user_name d-inline-block p-0 m-0 me-2">
+                                                    Ye Ye
+                                                </p>
+                                                <div class="bg-success d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>
+                                                <!--                                        <div class="bg-secondary d-inline-block" style="width: 10px;height: 10px;border-radius: 50%;"></div>-->
+                                            </div>
+                                            <p class="message_description_slug d-block p-0 m-0 small opacity-75">
+                                                Active Now
+                                            </p>
+                                            <!--                                            <p class="message_description_slug d-block p-0 m-0 small opacity-25">-->
+                                            <!--                                                24 minutes ago-->
+                                            <!--                                            </p>-->
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!--                                Middle message search box-->
+                                <div class="my-1 d-none d-flex justify-content-evenly align-items-center">
+                                    <input type="search" placeholder="Search Message ...." class="form-control form-control-sm rounded-pill">
+                                    <button class="btn btn-sm">
+                                        <i class="feather feather-search text-primary"></i>
+                                    </button>
+                                </div>
+
+                                <!--                                Right Icons-->
+                                <div class="">
+                                    <div class="p-1 d-none bg-primary text-white text-center d-inline-block" style="width: 35px;height: 35px;border-radius: 50%;">
+                                        <i class="feather feather-video"></i>
+                                    </div>
+                                    <div class="p-1 d-none bg-primary text-white text-center d-inline-block" style="width: 35px;height: 35px;border-radius: 50%;">
+                                        <i class="feather feather-phone"></i>
+                                    </div>
+                                    <div class="p-1 bg-primary text-white text-center d-inline-block" style="width: 35px;height: 35px;border-radius: 50%;">
+                                        <i class="feather feather-more-vertical"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--                    Right side navbar section end-->
+
+                    <!--                    Message display section start-->
+                    <div class="row p-2 mb-2" id="message_user1" style="height:70vh;scroll-behavior: smooth;position: relative;bottom: 0;overflow-y: scroll;overflow-x: hidden;">
+                        <div class="col-12">
+                            <!--                        message display box-->
+                            <section class="row">
+                                <!--                    message from another side of user-->
+                                <div class="bg-light my-3">
+                                    <div class="p-1 d-block bg-primary text-white float-start rounded position-relative my-2" style="max-width: 300px;height: auto;">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque modi officiis pariatur rerum, vitae.</p>
+                                        <div class="position-absolute start-100 top-0 ps-2 pe-2 ms-2">
+                                            <!-- Default dropstart button -->
+                                            <div class="btn-group dropend">
+                                                <i class="feather feather-more-vertical text-black"  data-bs-toggle="dropdown"></i>
+                                                <ul class="dropdown-menu">
+                                                    <!-- Dropdown menu links -->
+                                                    <li>
+                                                        <a class="dropdown-item text-danger" href="#">
+                                                            <i class="feather feather-trash "></i>
+                                                            Delete
+                                                        </a>
+                                                    </li>
+                                                    <li class="border-top border-bottom">
+                                                        <a class="dropdown-item text-primary" href="#">
+                                                            <i class="feather feather-edit"></i>
+                                                            Edit
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item text-black" href="#">
+                                                            <i class="feather feather-send"></i>
+                                                            Forward
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="position-absolute text-black top-100 start-0 pe-2 ps-2 mt-2 ">
+                                            <span class="ms-1 me-1">23:00 AM</span>
+                                            <span class="feather feather-eye text-primary me-2 text-center"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--                    message from user-->
+                                <div class="bg-white my-3">
+                                    <div class="p-1 d-block bg-primary text-white float-end position-relative rounded my-2" style="max-width: 300px;height: auto;">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque modi officiis pariatur rerum, vitae.</p>
+                                        <div class="position-absolute end-100 top-0 pe-2 ps-2 me-2">
+                                            <!-- Default dropstart button -->
+                                            <div class="btn-group dropstart">
+                                                <i class="feather feather-more-vertical text-black"  data-bs-toggle="dropdown"></i>
+                                                <ul class="dropdown-menu">
+                                                    <!-- Dropdown menu links -->
+                                                    <li class="">
+                                                        <a class="dropdown-item text-danger" href="#">
+                                                            <i class="feather feather-trash "></i>
+                                                            Delete
+                                                        </a>
+                                                    </li>
+                                                    <li class="border-top border-bottom">
+                                                        <a class="dropdown-item text-primary" href="#">
+                                                            <i class="feather feather-edit"></i>
+                                                            Edit
+                                                        </a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a class="dropdown-item text-black" href="#">
+                                                            <i class="feather feather-send"></i>
+                                                            Forward
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="position-absolute text-black end-0 top-100 pe-2 ps-2 mt-2 ">
+                                            <span class="feather feather-eye text-primary"></span>
+                                            <span class="ms-1 me-1">23:00AM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--                    message from another side of user-->
+
+                            </section>
+                        </div>
+                    </div>
+                    <!--                    Message display section end -->
+
+                    <!--                    Message send input section start-->
+                    <div class="row">
+                        <div class="mb-2 col-12 col-sm-12 col-md-12 col-xl-12 col-lg-12">
+                            <div class="d-flex justify-content-center position-relative">
+                                <textarea class="form-control me-2" rows="1" name="text" id="user_id_text"></textarea>
+                                <div class="d-flex justify-content-start align-items-center ">
+                                    <button class="btn btn-primary text-white me-2">
+                                        <i class="feather feather-send"></i>
+                                    </button>
+                                    <button class="btn border border-success text-black me-2" style="background: rgba(220,53,69,0.7);">
+                                        <i class="feather feather-paperclip text-white"></i>
+                                    </button>
+                                    <button class="d-none d-sm-none d-lg-inline-block d-md-inline-block d-lg-inline-block d-xl-inline-block btn border border-success text-black me-2" style="background: rgba(255,193,7,0.7);">
+                                        <i class="feather feather-more-horizontal text-white"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--                    Message send input section end-->
+
+                </div>
+                <!--                Right Sidebar section end-->
+            </div>
+        </section>
+    </div>
+</section>
+
+</body>
+<!--    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
