@@ -11,7 +11,7 @@ Almost Responsive,
 
 **Login**
 
-<div style="width: 450px;">
+<div style="width: 450px;height:600px;">
     <img src="assets/readme/login_ph.png">
 </div>
 <div style="width: 450px;">
@@ -23,7 +23,7 @@ Almost Responsive,
 
 **Register**
 
-<div style="width: 450px;">
+<div style="width: 450px;height:600px;">
 <img src="assets/readme/responsive_reg.png">
 </div>
 <div style="width: 450px;">
@@ -36,7 +36,7 @@ Almost Responsive,
 
 **Main**
 
-<div style="width: 450px;">
+<div style="width: 450px;height:600px;">
 <img src="assets/readme/main_mobi.png">
 </div>
 <div style="width: 450px;">
@@ -49,7 +49,7 @@ Almost Responsive,
 
 **Chat Display Box**
 
-<div style="width: 450px;">
+<div style="width: 450px;height:600px;">
 <img src="assets/readme/chatdisplayarea_lap.png">
 </div>
 <div style="width: 450px;">
@@ -62,7 +62,7 @@ Almost Responsive,
 
 **Friend**
 
-<div style="width: 450px;">
+<div style="width: 450px;height:600px;">
 <img src="assets/readme/friends_mobi.png">
 </div>
 <div style="width: 450px;">
@@ -75,7 +75,7 @@ Almost Responsive,
 
 **Profile**
 
-<div style="width: 450px;">
+<div style="width: 450px;height:600px;">
 <img src="assets/readme/profile_mobi.png">
 </div>
 <div style="width: 450px;">
