@@ -11,32 +11,32 @@ Almost Responsive,
 
 Login
 
-<img src="public/assets/readme/login_ph.png">
-<img src="public/assets/readme/login_(laptop).png">
+<img src="assets/readme/login_ph.png">
+<img src="assets/readme/login_(laptop).png">
 
 Register
 
-<img src="public/assets/readme/responsive_reg.png">
-<img src="public/assets/readme/reg.png">
+<img src="assets/readme/responsive_reg.png">
+<img src="assets/readme/reg.png">
 
 
 Main
 
-<img src="public/assets/readme/main_mobi.png">
-<img src="public/assets/readme/main_lap.png">
+<img src="assets/readme/main_mobi.png">
+<img src="assets/readme/main_lap.png">
 
 
 Chat Display Box
 
-<img src="public/assets/readme/chatdisplayarea_lap.png">
-<img src="public/assets/readme/chatdisplay_lap.png">
+<img src="assets/readme/chatdisplayarea_lap.png">
+<img src="assets/readme/chatdisplay_lap.png">
 
 Friend
 
-<img src="public/assets/readme/friends_mobi.png">
-<img src="public/assets/readme/friend_lap.png">
+<img src="assets/readme/friends_mobi.png">
+<img src="assets/readme/friend_lap.png">
 
 Profile
 
-<img src="public/assets/readme/profile_mobi.png">
-<img src="public/assets/readme/profile_lap.png">
+<img src="assets/readme/profile_mobi.png">
+<img src="assets/readme/profile_lap.png">
