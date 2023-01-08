@@ -12,7 +12,7 @@ Almost Responsive,
 **Login**
 
 <img src="assets/readme/login_ph.png">
-<img src="assets/readme/login_(laptop).png">
+<img src="assets/readme/login_lap.png">
 
 ---
 
